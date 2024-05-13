@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produto/Empresa</title>
+    <!-- Link para o Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Cadastro de Produto/Empresa</h1>
+        <form>
+            <div class="form-group">
+                <label for="nome">Nome ou Descrição:</label>
+                <input type="text" class="form-control" id="nome" placeholder="Nome ou Descrição">
+            </div>
+            <div class="form-group">
+                <label for="observacao">Observação:</label>
+                <textarea class="form-control" id="observacao" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="tipoPessoa">Tipo de Pessoa:</label>
+                <select class="form-control" id="tipoPessoa">
+                    <option>Física</option>
+                    <option>Jurídica</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="formasContato">Formas de Contato:</label>
+                <select multiple class="form-control" id="formasContato">
+                    <option>Whatsapp</option>
+                    <option>E-mail</option>
+                    <option>Carta</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Estado:</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="status" id="ativo" value="ativo" checked>
+                    <label class="form-check-label" for="ativo">
+                        Ativo
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="status" id="inativo" value="inativo">
+                    <label class="form-check-label" for="inativo">
+                        Inativo
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+
+        <hr>
+
+        <h2>Registros Cadastrados</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Tipo de Pessoa</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Produto A</td>
+                    <td>Descrição do Produto A</td>
+                    <td>Física</td>
+                    <td>Ativo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Produto B</td>
+                    <td>Descrição do Produto B</td>
+                    <td>Jurídica</td>
+                    <td>Inativo</td>
+                </tr>
+                <!-- Adicione mais linhas conforme necessário -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Link para o Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
